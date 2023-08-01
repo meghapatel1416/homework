@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>change color</title>
+    <style>
+        .box {
+            height: 50px;
+            width: 50px;
+            border-style: solid;
+        }
+
+        .green {
+            background-color: green;
+        }
+    </style>
+
+</head>
+
+<body>
+
+    <!-- create a 5*2 grid of boxes.
+    the box u click on should change its color to green.
+    if u click on green box again it should turn white.
+    the box u hover on should be highlighted with blue border. -->
+
+    <div id="box1" class="box" onclick="handleclick('box1')"></div>
+    <div id="box2" class="box" onclick="handleclick('box2')"></div>
+    <div id="box3" class="box" onclick="handleclick('box3')"></div>
+    <div id="box4" class="box" onclick="handleclick('box4')"></div>
+    <div id="box5" class="box" onclick="handleclick('box5')"></div>
+    <div id="box6" class="box" onclick="handleclick('box6')"></div>
+    <div id="box7" class="box" onclick="handleclick('box7')"></div>
+    <div id="box8" class="box" onclick="handleclick('box8')"></div>
+    <div id="box9" class="box" onclick="handleclick('box9')"></div>
+    <div id="box10" class="box" onclick="handleclick('box10')"></div>
+
+
+    <script>
+        function handleclick(id) {
+            // console.log("box clicked!")
+            // if(classList has 1 values )
+            // {
+            // document.getElementById(id).classList.add("green");
+            // } else{
+            //     document.getElementById(id).classList.remove("green");
+            // }
+
+            var clickedBox = document.getElementById(id);
+
+            if (clickedBox.classList.length === 1) {
+                clickedBox.classList.add("green");
+            } else {
+                clickedBox.classList.remove("green");
+            }
+        }
+
+    </script>
+
+</body>
+
+</html>
