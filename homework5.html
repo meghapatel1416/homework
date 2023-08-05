@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+   <head></head>
+   <body>
+
+    <!-- create a web page with two inputs a and b, and 1 submit button. when the user clicks on submit button,
+    the value of a^b should be displayed below. -->
+    <input type="text" id="input1" />
+    <input type="text" id="input2" />
+    <button onclick="calculate()" id="calculate">calculate</button>
+    <div id="result"></div>
+   </body>
+   <script>
+    function calculate() {
+        var value1 = Number(document.getElementById("input1").value) ;
+        var value2 = Number(document.getElementById("input2").value) ;
+        var result = 1
+        for(var i = 1; i <= value2; i++) {
+            result = result * value1
+        }
+        document.getElementById("result").innerText = result;
+    }
+   </script>
+</html>
