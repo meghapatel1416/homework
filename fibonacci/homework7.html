@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+    <head></head>
+    <body>
+        <!-- write a program to create fibonacci series upto N numbers. N should be the input taken from the user -->
+
+       <input type="text" id="input1"/>
+       <button onclick="createFibonacci()">submit</button>
+       <div id="result"></div>
+    </body>
+
+    <script>
+        function createFibonacci() {
+            var length = Number(document.getElementById("input1").value);
+            if (length === 1) {
+                document.getElementById("result").innerText = "0";
+            } else if (length === 2) {
+                document.getElementById("result").innerText = "0, 1";
+            } else {
+                var series = "0, 1";
+                var lastNumber = 1;
+                var secondLastNumber = 0;
+                for (var i = 3; i <= length; i++) {
+                    var nextNumber = lastNumber + secondLastNumber;
+                    series = series + ", " + nextNumber;
+                    secondLastNumber = lastNumber;
+                    lastNumber = nextNumber;
+                }
+                document.getElementById("result").innerText = series;
+            }
+        }
+
+       
+
+    </script>
+</html>
