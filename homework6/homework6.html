@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+   <head></head>
+   <body>
+
+    <!-- number divisible by 7 -->
+    <input type="text" id="input1" />
+    <input type="text" id="input2" />
+    <button onclick="calculate()">calculate</button>
+    <div id="result"></div>
+   </body>
+   <script>
+    function calculate() {
+        var value1 = Number(document.getElementById("input1").value) ;
+        var value2 = Number(document.getElementById("input2").value) ;
+        var count = 0;
+        for(var i = value1; i <= value2; i++) {
+            if (i % 7 === 0) {
+                count++;
+            }
+        }
+        document.getElementById("result").innerText = count;
+    }
+   </script>
+</html>
