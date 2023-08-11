@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+    <head>
+
+    </head>
+    <body>
+
+        <!-- Penalty Jar
+        stage 1:
+        Display the current penalty value at all time(Initially, it should be 0).
+        there should be a button "+ 10". on click which, the penalty value should get updated to value + 10. so,
+        if the user clickes the button3 times, the current penalty value become 30.
+
+        stage 2:
+        Add an input box where user can enter custom value and a button "add custom value." clicking on the button should 
+        only add the custom value that is entered in the input box (not 10).
+        
+        stage 3:
+        display the current fixed penalty value and add an input box to enter the new fixed penalty value and submit button.
+        on clicking the submit button the fixed penalty value should get updated from the user's input. after this, when the "add
+        Fixed Penalty" button is clicked, the new penalty amount should get added. -->
+
+
+
+        <div>add penalty value: <span id="penaltyvalue">0</span> </div>
+        
+        <button onclick="addPenaltyValue()"> + 10</button>
+        <br />
+        <br/>
+        <div>Current Fixed Penalty:<span id="currentFixedValue"></span> </div>
+        <input id="fixedPenaltyValue" type="text" />
+        <button onclick="addFixedValue()">Submit</button><br/>
+        <br/>
+        <input id="customPenaltyValue" type="text"/>
+        <button onclick="addCustomValue()">add custom Value</button>
+        
+        
+
+    </body>
+    <script>
+        var currentvalue = 0;
+        function addPenaltyValue() {
+            document.getElementById("penaltyvalue").innerText = currentvalue + 10;
+            currentvalue = currentvalue + 10;
+        }
+
+        function addCustomValue() {
+            var newPenaltyValue = currentvalue + Number(document.getElementById("customPenaltyValue").value);
+            document.getElementById("penaltyvalue").innerText = newPenaltyValue;
+            currentvalue = newPenaltyValue;
+            document.getElementById("customPenaltyValue").value = "";
+        }
+
+        function addFixedValue() {
+            var newFixedValue = Number(document.getElementById("fixedPenaltyValue").value);
+            document.getElementById("currentFixedValue").innerText = currentvalue + newFixedValue;
+            
+
+        }
+
+
+            
+
+
+
+
+        
+        
+    </script>
+</html
