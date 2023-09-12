@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+
+<head></head>
+
+<body>
+    <input id="input1" type="text" />
+    <button onclick="addlist()">ADD</button>
+    <button id="a" onclick="addBold()">TB</button> <br>
+    <ul id="result"></ul>
+
+    <script>
+        let addlist = () => {
+            let inputValue = document.getElementById("input1").value;
+            let htmlString = "<li>" + inputValue + "</li>"
+            document.getElementById("result").innerHTML += htmlString;
+            document.getElementById("input1").value = "";
+        }
+
+       
+
+
+        let addBold = () => {
+
+            var ban = document.getElementById("result").style.fontWeight;
+
+            if (ban == 'normal') {
+                document.getElementById("result").style.fontWeight = 'bold';
+            }
+            else {
+                document.getElementById("result").style.fontWeight = 'normal';
+            }
+        }
+
+
+
+
+
+
+    </script>
+
+</html>
+
+
+1. object is used when we have more then one values.
+
+2. we use loop to perform operation multipal number of time.
+
+3.code branching is used when we have more then 1 case and only one need to perform.
+
+4.Array.each() method return undefined.
+
+5 array.find()return element of arre or undefined
